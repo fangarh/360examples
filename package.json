@@ -2,7 +2,7 @@
   "$schema": "node_modules/albatros/schema.json",
   "name": "ru.topomatic.example_1",
   "displayName": "Демонстрационные приложение Topomatic 360",
-  "description": "Демонстрационные приложения для разработки на платформе albatros",
+  "description": "Демонстрационные приложения для разработки на платформе albatros, взаимодействие с элементами модели",
   "private": true,
   "version": "1.0.0",
   "main": "src/main.ts",
@@ -26,10 +26,20 @@
   },
   "albatros": {
     "actions": {
-      "example": {
-        "label": "Пример ",
-        "cmd": "example_cmd",
-        "description": "Пример "
+      "example1": {
+        "label": "Координаты точки",
+        "cmd": "example_select_point",
+        "description": "Взаимодействие с элементами модели, получение координат точки "
+      },
+      "example2": {
+        "label": "Выбрать объект",
+        "cmd": "example_select_element",
+        "description": "Взаимодействие с элементами модели, выбор объекта "
+      },
+      "example3": {
+        "label": "Выбрать нескольки объектов",
+        "cmd": "example_multiselect_element",
+        "description": "Взаимодействие с элементами модели, выбор объекта "
       }
     },
     "menu": [
@@ -37,7 +47,14 @@
         "label": "Примеры",
         "submenu": [
           {
-            "action": "example"
+            "action": "example1"            
+          }, {
+            "label": "Выбор объектов",
+            "submenu": [
+              {
+                  "action": "example2"
+              }
+            ]
           }
         ]
       }
