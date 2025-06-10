@@ -25,22 +25,19 @@
     "albatros": "*"
   },
   "albatros": {
-    "actions": {
-      "example": {
-        "label": "Пример ",
-        "cmd": "example_cmd",
-        "description": "Пример "
+    "viewsContainers": {
+      "bottomPanel": {
+        "label": "Пример панели",
+        "container": "bottom"
       }
     },
-    "menu": [
-      {
-        "label": "Примеры",
-        "submenu": [
-          {
-            "action": "example"
-          }
-        ]
+    "views": {
+      "intersectionsView": { 
+        "label": "",       
+        "type": "defined",
+        "container": "bottomPanel",
+        "cmd": "mountCmd"
       }
-    ]
+    }
   }
 }
