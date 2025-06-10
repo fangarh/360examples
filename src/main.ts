@@ -44,12 +44,6 @@ export default {
             console.error('CadViewContext is not available.');
             return [];
         }
-        
-        // Создаем диалоговое окно для управления выбором
-        const subMenuu:AlternativeCommands = {
-            "end":"Завершить выбор", 
-            "all":"Выбрать все"
-        };
                   
         // Получаем основной слой
         const layer = cadViewContext.layer;
@@ -64,7 +58,13 @@ export default {
 
         // Переменная для записи выбора
         var obj : any;
-
+        
+        // Создаем диалоговое окно для управления выбором
+        const subMenuu:AlternativeCommands = {
+            "end":"Завершить выбор", 
+            "all":"Выбрать все"
+        };
+        
         while(true){
             // Запрашиваем выбор у пользователя
             obj = await cadViewContext.getobject("Выберите объект", subMenuu, (obj) => isDwgEntity(obj));
