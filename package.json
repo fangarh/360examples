@@ -53,6 +53,9 @@
             "submenu": [
               {
                   "action": "example2"
+              },
+              {
+                  "action": "example3"  
               }
             ]
           }
