@@ -26,18 +26,67 @@
   },
   "albatros": {
     "actions": {
-      "example": {
-        "label": "Пример ",
-        "cmd": "example_cmd",
-        "description": "Пример "
+      "ex_text": {
+        "label": "Текст",        
+        "image":"text",
+        "cmd": "ex_text_cmd",
+        "description": "Текст "
+      },   
+      "ex_line": {
+        "label": "Линия",        
+        "image":"line",
+        "cmd": "ex_line_cmd",
+        "description": "Линия "
+      },      
+      "ex_polyline": {
+        "label": "Поли-линия ",        
+        "image":"polyline",
+        "cmd": "ex_polyline_cmd",
+        "description": "Поли-линия "
+      },      
+      "ex_solid": {
+        "label": "Мноогоугольник ",        
+        "image":"solid",
+        "cmd": "ex_solid_cmd",
+        "description": "Мноогоугольник "
+      },      
+      "ex_circle": {
+        "label": "Окружность",        
+        "image":"circle",
+        "cmd": "ex_circle_cmd",
+        "description": "Окружность "
       }
     },
-    "menu": [
+    "pages": [
       {
-        "label": "Примеры",
-        "submenu": [
+        "tag": "page_1",
+        "label": "Примитивы",
+
+        "groups": [
           {
-            "action": "example"
+            "tag": "group_1",
+            "items": [
+              {
+                "tag": "b",                
+                "action": "ex_line"
+              },              
+              {
+                "tag": "b",                
+                "action": "ex_polyline"
+              },              
+              {
+                "tag": "b",                
+                "action": "ex_solid"
+              },              
+              {
+                "tag": "b",                
+                "action": "ex_text"
+              },              
+              {
+                "tag": "b",                
+                "action": "ex_circle"
+              }
+            ]
           }
         ]
       }
