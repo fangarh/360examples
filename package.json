@@ -32,15 +32,20 @@
         "description": "Пример "
       }
     },
-    "menu": [
-      {
-        "label": "Примеры",
-        "submenu": [
-          {
-            "action": "example"
-          }
-        ]
+    "viewsContainers": {
+      "my_container":{
+        "label": "Пример контейнера",
+        "icon": "app_registration"
       }
-    ]
+
+    },
+    "views": {
+      "my_view": {
+        "label": "Пример дерева",
+        "type": "treeview",
+        "cmd": "build_tree", 
+        "container": "my_container"
+      }
+    }
   }
 }
