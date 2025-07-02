@@ -25,13 +25,6 @@
     "albatros": "*"
   },
   "albatros": {
-    "actions": {
-      "example": {
-        "label": "Пример ",
-        "cmd": "example_cmd",
-        "description": "Пример "
-      }
-    },
     "viewsContainers": {
       "my_container":{
         "label": "Пример контейнера",
@@ -42,8 +35,8 @@
     "views": {
       "my_view": {
         "label": "Пример дерева",
-        "type": "treeview",
-        "cmd": "build_tree", 
+        "type": "listview",
+        "cmd": "build_list", 
         "container": "my_container"
       }
     }
