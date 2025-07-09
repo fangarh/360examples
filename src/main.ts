@@ -1,18 +1,27 @@
-import { MyListDataProvider } from "./list_data_provider";
-import { MyListItem } from "./my_list_item";
+import { MyPropertyItem } from "./my_prop_item";
+import { MyPropertyProvider } from "./prop_data_provider";
 
 
-const data: MyListItem[] = [
-    { id: '1', name: 'Элемент 1', description: 'Описание 1' },
-    { id: '2', name: 'Элемент 2', description: 'Описание 2' }
+const json: MyPropertyItem[] = [
+    {
+        id: 'name',
+        label: 'Название',
+        value: 'Объект A',
+        editable: true
+    },
+    {
+        id: 'type',
+        label: 'Тип объекта',
+        value: 'Тип 2',
+        options: ['Тип 1', 'Тип 2', 'Тип 3', 'Тип 4']
+    }
 ];
 
 export default {
-    build_list: (e: Context): ListViewOptions<ListItem> =>{
-        const provider = new MyListDataProvider(data);
-
+    build_prop: (e: Context): PropertyOptions =>{
         return {
-            listDataProvider: provider
+            propertyProvider: new MyPropertyProvider(json),
+            showDescriptions: true
         };
     }
 }

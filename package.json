@@ -34,9 +34,9 @@
     },
     "views": {
       "my_view": {
-        "label": "Пример дерева",
-        "type": "listview",
-        "cmd": "build_list", 
+        "label": "Пример свойств",
+        "type": "property",
+        "cmd": "build_prop", 
         "container": "my_container"
       }
     }
